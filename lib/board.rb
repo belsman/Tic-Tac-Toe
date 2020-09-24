@@ -1,4 +1,6 @@
 class Board
+  attr_reader :board, :selected_moves
+
   def initialize
     @board = [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
     @selected_moves = []
