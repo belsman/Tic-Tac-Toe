@@ -67,8 +67,8 @@ describe Board do
 
     it 'returns O when O wins' do
       ttt_board.set_a_square(0, 'O')
-      ttt_board.set_a_square(4, 'O')
-      ttt_board.set_a_square(8, 'O')
+      ttt_board.set_a_square(3, 'O')
+      ttt_board.set_a_square(6, 'O')
       expect(ttt_board.win_or_draw).to be_eql('O')
     end
 
