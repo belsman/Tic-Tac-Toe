@@ -25,10 +25,23 @@ describe Game do
     end
 
     it 'returns X when X wins' do
-      game.board.set_a_square(0, 'X')
-      game.board.set_a_square(1, 'X')
       game.board.set_a_square(2, 'X')
+      game.board.set_a_square(5, 'X')
+      game.board.set_a_square(8, 'X')
       expect(game.win_draw).to be_eql('X')
+    end
+
+    it 'returns TIE when no Winner' do
+      game.board.set_a_square(0, 'X')
+      game.board.set_a_square(8, 'O')
+      game.board.set_a_square(6, 'X')
+      game.board.set_a_square(3, 'O')
+      game.board.set_a_square(5, 'X')
+      game.board.set_a_square(1, 'O')
+      game.board.set_a_square(2, 'X')
+      game.board.set_a_square(5, 'O')
+      game.board.set_a_square(7, 'X')
+      expect(game.win_draw).to be_eql('TIE')
     end
   end
 end

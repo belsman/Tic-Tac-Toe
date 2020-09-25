@@ -29,7 +29,7 @@ class Board
     winning_numbers = [[0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 3, 6], [1, 4, 7], [2, 5, 8], [0, 4, 8], [2, 4, 6]]
     status = nil
     winning_numbers.each do |n|
-      if !@board[n[0]].empty? && @board[n[0]] == @board[n[1]] && @board[n[1]] == @board[n[2]]
+      if !@board[n[0]].strip.empty? && @board[n[0]] == @board[n[1]] && @board[n[1]] == @board[n[2]]
         status = @board[n[0]]
         break
       end
